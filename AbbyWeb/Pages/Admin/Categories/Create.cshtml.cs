@@ -30,7 +30,7 @@ namespace AbbyWeb.Pages.Admin.Categories
             if (ModelState.IsValid)
             {
                 _unitOfWork.Category.Add(Category);
-                _unitOfWork.Category.Save();
+                _unitOfWork.Save();
                 TempData["success"] = "Category created successfully";
                 return RedirectToPage("Index");
             }
